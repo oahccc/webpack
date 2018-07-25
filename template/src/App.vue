@@ -1,31 +1,37 @@
 <template>
   <div id="app">
     {{#router}}
-    <router-view/>
-    {{else}}
     <Header/>
     <Nav/>>
     <Banner/>
+    <router-view/>
     <Footer/>
+    {{else}}
+    <HelloWorld/>
     {{/router}}
   </div>
 </template>
 
 <script>
-{{#unless router}}
+{{#router}}
 import Header from './components/Header'
 import Nav from './components/Nav'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
+{{else}}
+import HelloWorld from './components/HelloWorld'
+{{/router}}
 
-{{/unless}}
 export default {
-  name: 'App'{{#router}}{{else}},
+  name: 'App',
   components: {
+    {{#router}}
     Header
     Nav
     Banner
     Footer
+    {{else}}
+    HelloWorld
   }{{/router}}
 }
 </script>
