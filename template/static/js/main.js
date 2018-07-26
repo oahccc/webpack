@@ -31,10 +31,10 @@
 			$body.classList.remove('is-loading');
 		});
 
-	// Nav.
-		var	$nav = document.querySelector('#nav'),
-			$navToggle = document.querySelector('a[href="#nav"]'),
-			$navClose;
+	// // Nav.
+	// 	var	$nav = document.querySelector('#nav'),
+	// 		$navToggle = document.querySelector('a[href="#nav"]'),
+	// 		$navClose;
 
 		// Event: Prevent clicks/taps inside the nav from bubbling.
 			addEventsListener($nav, 'click touchend', function(event) {
@@ -46,43 +46,43 @@
 				$nav.classList.remove('visible');
 			});
 
-		// Toggle.
+		// // Toggle.
 
-			// Event: Toggle nav on click.
-				$navToggle.addEventListener('click', function(event) {
+		// 	// Event: Toggle nav on click.
+		// 		$navToggle.addEventListener('click', function(event) {
 
-					event.preventDefault();
-					event.stopPropagation();
+		// 			event.preventDefault();
+		// 			event.stopPropagation();
 
-					$nav.classList.toggle('visible');
+		// 			$nav.classList.toggle('visible');
 
-				});
+		// 		});
 
-		// Close.
+		// // Close.
 
-			// Create element.
-				$navClose = document.createElement('a');
-					$navClose.href = '#';
-					$navClose.className = 'close';
-					$navClose.tabIndex = 0;
-					$nav.appendChild($navClose);
+		// 	// Create element.
+		// 		$navClose = document.createElement('a');
+		// 			$navClose.href = '#';
+		// 			$navClose.className = 'close';
+		// 			$navClose.tabIndex = 0;
+		// 			$nav.appendChild($navClose);
 
-			// Event: Hide on ESC.
-				window.addEventListener('keydown', function(event) {
+		// 	// Event: Hide on ESC.
+		// 		window.addEventListener('keydown', function(event) {
 
-					if (event.keyCode == 27)
-						$nav.classList.remove('visible');
+		// 			if (event.keyCode == 27)
+		// 				$nav.classList.remove('visible');
 
-				});
+		// 		});
 
-			// Event: Hide nav on click.
-				$navClose.addEventListener('click', function(event) {
+		// 	// Event: Hide nav on click.
+		// 		$navClose.addEventListener('click', function(event) {
 
-					event.preventDefault();
-					event.stopPropagation();
+		// 			event.preventDefault();
+		// 			event.stopPropagation();
 
-					$nav.classList.remove('visible');
+		// 			$nav.classList.remove('visible');
 
-				});
+		// 		});
 
 })();

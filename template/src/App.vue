@@ -2,7 +2,7 @@
   <div id="app">
     {{#router}}
     <Header/>
-    <Nav/>>
+    <Nav/>
     <Banner/>
     <router-view/>
     <Footer/>
@@ -14,10 +14,10 @@
 
 <script>
 {{#router}}
-import Header from './components/Header'
-import Nav from './components/Nav'
-import Banner from './components/Banner'
-import Footer from './components/Footer'
+import AppHeader from './components/AppHeader'
+import AppNav from './components/AppNav'
+import AppBanner from './components/AppBanner'
+import AppFooter from './components/AppFooter'
 {{else}}
 import HelloWorld from './components/HelloWorld'
 {{/router}}
@@ -26,13 +26,14 @@ export default {
   name: 'App',
   components: {
     {{#router}}
-    Header
-    Nav
-    Banner
-    Footer
+    AppHeader,
+    AppNav,
+    AppBanner,
+    AppFooter,
     {{else}}
     HelloWorld
-  }{{/router}}
+    {{/router}}
+  }
 }
 </script>
 
