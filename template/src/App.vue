@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     {{#router}}
-    <Header/>
-    <Nav/>
-    <Banner/>
+    <AppHeader/>
+    <AppNav/>
+    <AppBanner/>
     <router-view/>
-    <Footer/>
+    <AppFooter/>
     {{else}}
     <HelloWorld/>
     {{/router}}
